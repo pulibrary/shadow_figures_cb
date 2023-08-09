@@ -2,32 +2,13 @@
 title: About
 layout: about
 permalink: /about.html
-# include CollectionBuilder info at bottom
-credits: true
-# Edit the markdown on in this file to describe your collection
-# Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %} 
+{% include feature/jumbotron.html objectid="object_001" %}
 
-{% include feature/nav-menu.html sections="About CollectionBuilder CSV;About the About Page" %}
 
-## About CollectionBuilder CSV
+## About the Chinese Shadow Figures Collection
 
-This demo collection features items from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital/), and is build using [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv).
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam vel quam elementum pulvinar etiam non quam lacus. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Bibendum est ultricies integer quis auctor elit. Pulvinar sapien et ligula ullamcorper malesuada proin. Duis convallis convallis tellus id. Euismod elementum nisi quis eleifend quam adipiscing vitae proin. Posuere sollicitudin aliquam ultrices sagittis orci a. Amet venenatis urna cursus eget nunc scelerisque. Proin sed libero enim sed faucibus turpis in eu. Ipsum faucibus vitae aliquet nec ullamcorper sit amet. Dolor purus non enim praesent elementum facilisis leo vel. Ut tortor pretium viverra suspendisse potenti nullam ac tortor. Odio aenean sed adipiscing diam donec. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Faucibus et molestie ac feugiat sed lectus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat. A pellentesque sit amet porttitor. Eu augue ut lectus arcu bibendum at varius vel pharetra. Lectus nulla at volutpat diam ut venenatis.
 
-CollectionBuilder-CSV is a "Stand Alone" template for creating digital collection and exhibit websites using Jekyll, given:
-
-- a CSV of collection metadata
-- a folder of images, PDFs, audio, or video files
-
-Driven by your collection metadata, the template generates engaging visualizations to browse and explore your objects.
-The resulting static site can be hosted on any basic web server.
-
-[CollectionBuilder](https://github.com/CollectionBuilder/) is an set of open source tools for creating digital collection and exhibit websites that are driven by metadata and powered by modern static web technology.
-See [CB Docs](https://collectionbuilder.github.io/cb-docs/) for detailed information.
-
-{% include feature/image.html objectid="demo_001" width="75" %} 
-
-<!-- IMPORTANT!!! DELETE this comment and the include below when you are finished editing this page for your collection. The include below introduces about page features. They will show up on your collection's about page until you delete it.  -->
-{% include cb/about_the_about.md %} 
+Id aliquet risus feugiat in. Metus dictum at tempor commodo ullamcorper a lacus vestibulum. Eu feugiat pretium nibh ipsum. Urna neque viverra justo nec ultrices dui. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Arcu felis bibendum ut tristique et egestas quis ipsum suspendisse. Nunc congue nisi vitae suscipit tellus. Ac ut consequat semper viverra nam libero. Posuere urna nec tincidunt praesent semper feugiat nibh. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec.
