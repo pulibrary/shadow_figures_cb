@@ -2,4 +2,5 @@ field,display_name,browse_link,external_link,dc_map,schema_map
 title,Title,,,DCTERMS.title,headline
 description,Description,,,DCTERMS.description,description
 notes,Notes,,,,keywords
-subject,Subjects,true,,DCTERMS.subject,keywords
+subject,Subjects,,,DCTERMS.subject,keywords
+dimensions,Dimensions,,,DCTERMS.SizeOrDuration,keywords
