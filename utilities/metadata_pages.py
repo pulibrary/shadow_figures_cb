@@ -85,10 +85,10 @@ with open(source, mode="r", encoding="utf-8") as f:
             thumbnail = None
             print(f"no images for {objectid}")
 
-        if len(real_images) == 1:
-            object['display_template'] = 'item'
-        else:
-            object['display_template'] = 'compound_object'
+        #if len(real_images) == 1:
+        #    object['display_template'] = 'item'
+        #else:
+        object['display_template'] = 'compound_object'
         object['image_thumb'] = thumbnail
 
         for i,(image_name, other_objects) in enumerate(real_images):
