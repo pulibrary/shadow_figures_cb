@@ -43,12 +43,14 @@ def image_thumb(image_name):
                       size="400,")
 
 
-def extant_images(names_string, flags_string):
+def extant_images(names_string, flags_string, objects_string):
     images = names_string.split('|')
     flags = flags_string.split('|')
+    objects = objects_string.split('|')
+    
     if len(images) != len(flags):
         raise(ValueError("image list and flag list are not the same size"))
-    return [fname for fname, flag in zip(images, flags) if flag == 'YES']
+    return [[fname, objs] for fname, objs, flag in zip(images, objects, flags) if flag == 'YES']
 
 def object_title(description):
     pattern = re.compile(r"^([^\.]+)")
@@ -76,9 +78,9 @@ with open(source, mode="r", encoding="utf-8") as f:
         object['notes'] = row['notes']
         # objects.append(object)
         images = []
-        real_images = extant_images(row['imagename'], row['imageexists'])
+        real_images = extant_images(row['imagename'], row['imageexists'], row['imagecomments'])
         try:
-            thumbnail = image_thumb(real_images[0])
+            thumbnail = image_thumb(real_images[0][0])
         except IndexError:
             thumbnail = None
             print(f"no images for {objectid}")
@@ -89,7 +91,7 @@ with open(source, mode="r", encoding="utf-8") as f:
             object['display_template'] = 'compound_object'
         object['image_thumb'] = thumbnail
 
-        for i,image_name in enumerate(real_images):
+        for i,(image_name, other_objects) in enumerate(real_images):
             image = {}
             image['objectid'] = f"{objectid}_{i}"
             image['parentid'] = objectid
@@ -101,6 +103,16 @@ with open(source, mode="r", encoding="utf-8") as f:
             image['image_small'] = image_small(image_name)
             image['image_thumb'] = image_thumb(image_name)
             image['image_alt_text'] = f"image containing {objectid}"
+            other_objects = other_objects.replace(" ","")
+            other_objects_a = other_objects.split(",")
+            other_objects = ""
+            for object_name in other_objects_a:
+                obj_num = '{:04d}'.format(int(re.search(r'\d+', object_name).group()))
+                if f"object_{obj_num}" != objectid:
+                    if other_objects != "":
+                        other_objects += ";"
+                    other_objects += f"object_{obj_num}"
+            image['other_objects'] = other_objects
             images.append(image)
 
         objects.append(object)
@@ -111,7 +123,7 @@ with open(source, mode="r", encoding="utf-8") as f:
 outfile = "../_data/metadata.csv"
 #outfile = "/tmp/cb_test.csv"
 with open(outfile, "w", newline='', encoding="utf-8") as out:
-    writer = DictWriter(out, fieldnames=['objectid', 'parentid', 'title','identifier','subject','dimensions','display_template','format','object_location','image_small','image_thumb','image_alt_text','description', 'notes'])
+    writer = DictWriter(out, fieldnames=['objectid', 'parentid', 'title','identifier','subject','dimensions','display_template','format','object_location','image_small','image_thumb','image_alt_text','description', 'notes', 'other_objects'])
     writer.writeheader()
     for object in objects:
         writer.writerow(object)

@@ -4,3 +4,4 @@ description,Description,,,DCTERMS.description,description
 notes,Notes,,,,keywords
 subject,Subjects,,,DCTERMS.subject,keywords
 dimensions,Dimensions,,,DCTERMS.SizeOrDuration,keywords
+other_objects,Other objects in this image,true,,,keywords
