@@ -35,9 +35,11 @@
                         href="#{{ child.objectid }}"
                         onclick="window.location.hash='{{ child.objectid }}'"
                         class="btn btn-sm btn-outline-secondary small stretched-link">
-                        {{ child.display_template | upcase | default: "Item" }} <svg class="bi icon-sprite" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#icon-{{ child.display_template | default: 'file'}}"/></svg>
+                        
+                        {{ child.display_template | upcase | default: "Item" }} 
+                        <svg class="bi icon-sprite" fill="currentColor" aria-hidden="true"><use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#icon-{{ child.display_template | default: 'file'}}"/></svg>
                     </a> 
-
+                
                     <!-- child object modal -->
                     <div class="modal fade" id="{{ child.objectid }}" tabindex="-1" role="dialog" aria-labelledby="{{ child.objectid }}ModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xxl">

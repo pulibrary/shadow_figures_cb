@@ -47,7 +47,7 @@ def extant_images(names_string, flags_string, objects_string):
     images = names_string.split('|')
     flags = flags_string.split('|')
     objects = objects_string.split('|')
-    
+   # print(objects_string)
     if len(images) != len(flags):
         raise(ValueError("image list and flag list are not the same size"))
     return [[fname, objs] for fname, objs, flag in zip(images, objects, flags) if flag == 'YES']
@@ -62,11 +62,13 @@ def object_title(description):
 
 
 objects = []
+all_images = dict()
 with open(source, mode="r", encoding="utf-8") as f:
     reader = DictReader(f, delimiter='\t')
     for row in reader:
         object = {}
         objectid = f"object_{row['objectno'].rjust(4, '0')}"
+        objectname = f"Object {row['objectno']}"
         object['objectid'] = objectid
         object['identifier'] = row['objectno']
         object['title'] = object_title(row['description'])
@@ -95,14 +97,21 @@ with open(source, mode="r", encoding="utf-8") as f:
             image = {}
             image['objectid'] = f"{objectid}_{i}"
             image['parentid'] = objectid
+
+            if not(image_name) in all_images:
+                all_images[image_name] = len(all_images) + 1
+
             filename = Path(image_name)
-            image['title'] = f"{str(filename)} containing {objectid}"
+            #image['title'] = f"Image {all_images[image_name]} containing {objectname}"
             image['display_template'] = 'image'
             image['format'] = "image/jpg" # as delivered by IIIF server
             image['object_location'] = object_location(image_name)
             image['image_small'] = image_small(image_name)
             image['image_thumb'] = image_thumb(image_name)
             image['image_alt_text'] = f"image containing {objectid}"
+
+            image['identifier'] = row['objectno']
+
             other_objects = other_objects.replace(" ","")
             other_objects_a = other_objects.split(",")
             other_objects = ""

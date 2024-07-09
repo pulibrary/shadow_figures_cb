@@ -1,23 +1,24 @@
 ---
 # Default home page with boxes providing collection stats
-layout: page
+layout: page-full-width
 ---
 {%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
 <div class="row">
 
-  <div class="col-md-8">
+  <div class="col-md-12">
 
     {% include index/description.html %}
-    {% include index/carousel.html title="Sample Items" %}
+    {% include index/carousel.html title="Featured Items from the Collection" height=500 %}
 
   </div>
+  <!--
   <div class="col-md-4">
 
-      <!-- {% include index/time.html %} -->
+      <-- {% include index/time.html %} --
 
     {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="primary" %}
 
-      <!-- {% include index/featured-terms.html field="location" title="Locations" btn-color="outline-secondary" %} -->
+      <-- {% include index/featured-terms.html field="location" title="Locations" btn-color="outline-secondary" %} --
 
     {% include index/objects.html %}
 
@@ -27,5 +28,5 @@ layout: page
     {% include index/data-download.html %}
 
   </div>
-
+-->
 </div>

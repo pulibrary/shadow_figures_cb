@@ -1,4 +1,3 @@
 field,display_name,btn,hidden,sort_name
-identifier,,,,
-subject,,true
-description,,,,
+identifier,Object ID,,,
+description,,,true
