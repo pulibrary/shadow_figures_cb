@@ -10,8 +10,8 @@ import os
 from functools import partial
 
 
-# source = "../_data/shadowfigures.tsv"
-source = "../_data/metadata_old.csv"
+source = "../_data/shadowfigures.tsv"
+# source = "../_data/metadata_old.csv"
 
 # imagedir = Path("../objects")
 
@@ -33,16 +33,13 @@ object_uri = partial(iiif_uri,
               format="jpg")
 
 def object_location(image_name):
-    return object_uri(identifier=identifier_from_image_name(image_name),
-                      size="full")
+    return "/objects/" + image_name 
 
 def image_small(image_name):
-    return object_uri(identifier=identifier_from_image_name(image_name),
-                      size="800,")
+    return "/objects/small/" + image_name.replace(".JPG","_sm.jpg")
 
 def image_thumb(image_name):
-    return object_uri(identifier=identifier_from_image_name(image_name),
-                      size="400,")
+    return "/objects/thumbs/" + image_name.replace(".JPG","_th.jpg")
 
 
 def extant_images(names_string, flags_string, objects_string):

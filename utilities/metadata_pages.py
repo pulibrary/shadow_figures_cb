@@ -10,7 +10,7 @@ import os
 from functools import partial
 
 
-source = "/Users/wulfmanc/repos/gh/pulibrary/shadow_figures_cb/_data/metadata_old.csv"
+source = "../_data/metadata_old.csv"
 
 def extracted_file_name(url) -> str:
     match = re.search(r".*?%2F(.*?)/", url)
