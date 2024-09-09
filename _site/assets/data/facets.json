@@ -1,0 +1,30 @@
+{
+    "facets": [ 
+        {
+            "field": "subject",
+            "terms": { 
+                "jing head": 585,
+                "chou head": 425,
+                "sheng head": 392,
+                "male body": 293,
+                "dan head": 191,
+                "property": 142,
+                "creature head": 72,
+                "female body": 71,
+                "figure": 45,
+                "creature": 30,
+                "child body": 13,
+                "figures": 12,
+                "text": 1,
+                "brush pen": 1
+            }
+        },
+        {
+            "field": "format",
+            "terms": { 
+                "image/jpg": 2961
+            }
+        }
+        
+    ]
+}

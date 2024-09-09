@@ -1,0 +1,21 @@
+{ 
+    "title": "Chinese Shadow Figures",
+    "url": "http://localhost:4000/",
+    "image": "/assets/img/shadow_banner.png", 
+    "description": "A 2000+ piece collection of figures used in Chinese traditional shadow theater",
+    "publisher": { 
+        "name": "Princeton University Library", 
+        "url": "https://library.princeton.edu/", 
+        "logo": "https://library.princeton.edu/sites/all/themes/pul_base/assets/public/images/pul-logo-new.png" 
+    },
+    "date_start": "",
+    "date_end": "",
+    "objects": {
+        null: "0",
+        "image/jpg": "2961"
+        
+    },
+    "data": "http://localhost:4000/assets/data/datapackage.json",
+    "last_build_date": "2024-09-05"
+}
+
