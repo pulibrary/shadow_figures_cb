@@ -1,7 +1,7 @@
 { 
     "title": "Chinese Shadow Figures",
-    "url": "http://localhost:4000/",
-    "image": "/assets/img/shadow_banner.png", 
+    "url": "http://localhost:4000/shadowfigures/",
+    "image": "/shadowfigures/assets/img/shadow_banner.png", 
     "description": "A 2000+ piece collection of figures used in Chinese traditional shadow theater",
     "publisher": { 
         "name": "Princeton University Library", 
@@ -15,7 +15,7 @@
         "image/jpg": "2961"
         
     },
-    "data": "http://localhost:4000/assets/data/datapackage.json",
-    "last_build_date": "2024-09-05"
+    "data": "http://localhost:4000/shadowfigures/assets/data/datapackage.json",
+    "last_build_date": "2024-09-11"
 }
 
