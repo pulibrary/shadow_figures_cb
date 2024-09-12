@@ -132,7 +132,7 @@ task :generate_derivatives, [:thumbs_size, :small_size, :density, :missing, :com
       end
 
       # Get the lowercase filename without any leading path and extension.
-      base_filename = File.basename(filename, '.*').downcase
+      base_filename = File.basename(filename, '.*')
 
       # Optimize the original image.
       if args.compress_originals == 'true'
