@@ -4,7 +4,7 @@
     "title": "Chinese Shadow Figures Data",
     "description": "Metadata and data derived from Chinese Shadow Figures. A 2000+ piece collection of figures used in Chinese traditional shadow theater",
     "keywords":  ["Princeton","East Asian Library","Shadow Figures"],
-    "homepage": "http://localhost:4000/",
+    "homepage": "http://localhost:4000/shadowfigures/",
     "contributors": [
         {
             "title": "Princeton University Library",
@@ -12,7 +12,7 @@
             "role": "author"
         }
     ],
-    "image": "/assets/img/shadow_banner.png",
+    "image": "/shadowfigures/assets/img/shadow_banner.png",
     "licenses": [
         {
             "name": "CC0-1.0",
