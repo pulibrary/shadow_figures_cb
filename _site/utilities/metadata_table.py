@@ -104,9 +104,9 @@ with open(source, mode="r", encoding="utf-8") as f:
             #image['title'] = f"Image {all_images[image_name]} containing {objectname}"
             image['display_template'] = 'image'
             image['format'] = "image/jpg" # as delivered by IIIF server
-            image['object_location'] = object_location(image_name)
-            image['image_small'] = image_small(image_name)
-            image['image_thumb'] = image_thumb(image_name)
+            image['object_location'] = object_location(image_name).lower()
+            image['image_small'] = image_small(image_name).lower()
+            image['image_thumb'] = image_thumb(image_name).lower()
             image['image_alt_text'] = f"image containing {objectid}"
 
             image['identifier'] = row['objectno']
