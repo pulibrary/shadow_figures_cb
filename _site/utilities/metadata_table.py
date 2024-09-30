@@ -81,7 +81,7 @@ with open(source, mode="r", encoding="utf-8") as f:
         images = []
         real_images = extant_images(row['imagename'], row['imageexists'], row['imagecomments'])
         try:
-            thumbnail = image_thumb(real_images[0][0])
+            thumbnail = image_thumb(real_images[0][0]).lower()
         except IndexError:
             thumbnail = None
             print(f"no images for {objectid}")
