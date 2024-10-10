@@ -44,7 +44,7 @@
                     <div class="modal fade" id="{{ child.objectid }}" tabindex="-1" role="dialog" aria-labelledby="{{ child.objectid }}ModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xxl">
                             <div class="modal-content text-start">
-
+                                {% if forloop.length > 1 %}
                                 <div class="modal-header ">
                                     <div class="modal-title w-100" id="{{ child.objectid }}ModalLabel">
                                         <div class="row">
@@ -60,10 +60,10 @@
                                             {% capture prev_item_id %}{{ children[prev_index].objectid }}{% endcapture %}
                                             <div class="col-1 col-md-2">
                                                 <button data-bs-target="#{{ prev_item_id }}" data-bs-toggle="modal" onclick="window.location.hash='{{ prev_item_id }}'" class="btn btn-outline-dark btn-sm prev-child-button" >
-                                                    <svg class="bi icon-sprite" role="img" aria-label="Previous Item">
+                                                    <svg class="bi icon-sprite" role="img" aria-label="Previous Image">
                                                         <use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#arrow-left"/>
                                                     </svg>
-                                                    <span class="d-none d-md-inline">Previous Item</span>
+                                                    <span class="d-none d-md-inline">Previous Image</span>
                                                 </button>
                                             </div>
                                             <div class="col-9 col-md-8 text-center">
@@ -74,8 +74,8 @@
                                             </div>
                                             <div class="col-1 col-md-2 text-end">
                                                 <button  data-bs-target="#{{ next_item_id }}" data-bs-toggle="modal" onclick="window.location.hash='{{ next_item_id }}'" class="ms-md-5 btn btn-outline-dark btn-sm next-child-button">
-                                                    <span class="d-none d-md-inline">Next Item</span>
-                                                    <svg class="bi icon-sprite" role="img" aria-label="Next Item">
+                                                    <span class="d-none d-md-inline">Next Image</span>
+                                                    <svg class="bi icon-sprite" role="img" aria-label="Next Image">
                                                         <use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#arrow-right"/>
                                                     </svg>
                                                 </button>
@@ -83,7 +83,7 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                {% endif %}
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-md-8">

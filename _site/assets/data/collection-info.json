@@ -2,11 +2,11 @@
     "title": "Chinese Shadow Figures",
     "url": "http://localhost:4000/shadowfigures/",
     "image": "/shadowfigures/assets/img/shadow_banner.png", 
-    "description": "A 2000+ piece collection of figures used in Chinese traditional shadow theater",
+    "description": "A 2000+ piece collection of figures used in Chinese traditional shadow theater. They are made of leather and other semi-transparent materials so that they can be backlit against a screen. Dating from the late Qing and early Republican period, these figures were used to depict a variety of folktales and other aspects of Chinese culture.",
     "publisher": { 
         "name": "Princeton University Library", 
         "url": "https://library.princeton.edu/", 
-        "logo": "https://library.princeton.edu/sites/all/themes/pul_base/assets/public/images/pul-logo-new.png" 
+        "logo": "https://library.princeton.edu/sites/g/files/toruqf6021/themes/site/logo.svg" 
     },
     "date_start": "",
     "date_end": "",
@@ -16,6 +16,6 @@
         
     },
     "data": "http://localhost:4000/shadowfigures/assets/data/datapackage.json",
-    "last_build_date": "2024-09-30"
+    "last_build_date": "2024-10-10"
 }
 
